@@ -612,7 +612,7 @@ class TitleState extends MusicBeatState
 				case 8:
 					addMoreText(curWacky[1]);
 				// credTextShit.text += '\nlmao';
-				case 9;
+				case 9:
 					deleteCoolText();
 				// credTextShit.visible = false;
 				// credTextShit.text = "Friday";
