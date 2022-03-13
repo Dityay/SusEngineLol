@@ -579,14 +579,11 @@ class TitleState extends MusicBeatState
 			switch (sickBeats)
 			{
 				case 1:
-					#if PSYCH_WATERMARKS
 					createCoolText(['Psych Engine by'], 15);
 					addMoreText('Shadow Mario', 15);
 					addMoreText('RiverOaken', 15);
 					addMoreText('shubs', 15);
-					#else
-					addMoreText('present');
-					#end
+					addMoreText('bb-panzu', 15);
 				// credTextShit.text += '\npresent...';
 				// credTextShit.addText();
 				case 2:
@@ -595,11 +592,12 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = 'In association \nwith';
 				// credTextShit.screenCenter();
 				case 3:
-					createCoolText(['Sus Engine By'], -40);
+					createCoolText(['Dream Engine By'], -40);
 					addMoreText('SusDream12', -40);
-					addMoreText('YoguUHT1', -40);
+					addMoreText('DrackDream', -40);
+					addMoreText('PumpDream', -40);
 				// credTextShit.text += '\nNewgrounds';
-				case 4:
+				case 5:
 					deleteCoolText();
 					ngSpr.visible = false;
 				// credTextShit.visible = false;
@@ -655,13 +653,13 @@ class TitleState extends MusicBeatState
 						sound = FlxG.sound.play(Paths.sound('monikapound'));
 					case 'BBPANZU':
 						sound = FlxG.sound.play(Paths.sound('JingleBB'));
-					
-					default: //Go back to normal ugly ass boring GF :/
+				    
+					default: //Go back to normal ugly ass boring GF ._.
 						remove(ngSpr);
 						remove(credGroup);
 						FlxG.camera.flash(FlxColor.WHITE, 2);
 						skippedIntro = true;
-						playJingle = false;
+						playJingle = true;
 						
 						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 						FlxG.sound.music.fadeIn(4, 0, 0.7);
@@ -696,7 +694,7 @@ class TitleState extends MusicBeatState
 			{
 				remove(ngSpr);
 				remove(credGroup);
-				FlxG.camera.flash(FlxColor.WHITE, 4);
+				FlxG.camera.flash(FlxColor.BLACK, 4);
 
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 				if (easteregg == null) easteregg = '';
