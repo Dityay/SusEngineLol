@@ -81,11 +81,10 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
-                ['Welcome to DreamEngine'],
 		        ['Dream Engine Team'],
-		        ['SusDreams12','sus','Dream Engine Main Coder','https://youtube.com/channel/UCiW2zKWIYs2-G5A02L43BNA', '00B008'],
-		        ['DrackDream','drck','Dream Engine Assistant Coder','about:blank', 'BA00FF'],
-		        ['PumpDream','noicon','Dream Engine Helper','https://youtube.com/channel/UCVnr3y5m4PYt3_VCG45vfZw', 'FFC100'],
+		        ['SusDreams12','sus','Dream Engine Main Coder','https://youtube.com/channel/UCUE0me_c8ASEfIIPX3yM2HQ', '00B008'],
+		        ['DrackDream','drck','Dream Engine Helper','about:blank', '727272'],
+		        ['PumpDream','pump','Dream Engine Helper','https://youtube.com/channel/UCVnr3y5m4PYt3_VCG45vfZw', 'FFBB00'],
 		        [''],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',							'https://twitter.com/Shadow_Mario_',	'444444'],
