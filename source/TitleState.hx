@@ -616,13 +616,13 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = "Friday";
 				// credTextShit.screenCenter();
 				case 10:
-					addMoreText('Friday');
+					addMoreText('FNF');
 				// credTextShit.visible = true;
 				case 11:
-					addMoreText('Night');
+					addMoreText('Dream');
 				// credTextShit.text += '\nNight';
 				case 12:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+					addMoreText('Engine'); // credTextShit.text += '\nFunkin';
 
 				case 13:
 					skipIntro();
@@ -631,6 +631,29 @@ class TitleState extends MusicBeatState
 	}
 
 	var skippedIntro:Bool = false;
+
+	function skipIntro():Void
+	{
+		if (!skippedIntro)
+		{
+			remove(ngSpr);
+
+			logoBl.angle = -4.5;
+
+			new FlxTimer().start(0.0001, function(tmr:FlxTimer)
+				{
+					if(logoBl.angle == -4.5) 
+						FlxTween.angle(logoBl, logoBl.angle, 4.5, 4.5, {ease: FlxEase.quartInOut});
+					if (logoBl.angle == 4.5) 
+						FlxTween.angle(logoBl, logoBl.angle, -4.5, 4.5, {ease: FlxEase.quartInOut});
+				}, 0);
+
+			FlxG.camera.flash(FlxColor.WHITE, 4);
+			remove(credGroup);
+			skippedIntro = true;
+		}
+	}
+}
 	var increaseVolume:Bool = false;
 	function skipIntro():Void
 	{
